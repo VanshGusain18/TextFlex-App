@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TextFlex-App/static/css/main.dc4d6ff2.css",
+    "main.js": "/TextFlex-App/static/js/main.f8a9a102.js",
+    "static/js/453.ae270511.chunk.js": "/TextFlex-App/static/js/453.ae270511.chunk.js",
+    "index.html": "/TextFlex-App/index.html",
+    "main.dc4d6ff2.css.map": "/TextFlex-App/static/css/main.dc4d6ff2.css.map",
+    "main.f8a9a102.js.map": "/TextFlex-App/static/js/main.f8a9a102.js.map",
+    "453.ae270511.chunk.js.map": "/TextFlex-App/static/js/453.ae270511.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc4d6ff2.css",
+    "static/js/main.f8a9a102.js"
+  ]
+}
