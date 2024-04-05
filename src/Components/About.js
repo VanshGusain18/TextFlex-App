@@ -21,7 +21,7 @@ export default function About(props) {
               aria-controls="collapseOne"
               style={myStyle}
             >
-              Accordion Item #1
+              <strong>Case Manipulation Tools</strong>
             </button>
           </h2>
           <div
@@ -30,14 +30,11 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              TextFlex simplifies the process of adjusting the case of text
+              strings with its intuitive tools. Users can effortlessly convert
+              text to uppercase, lowercase, or capitalize the first letter of
+              each word. This feature streamlines tasks such as standardizing
+              text formatting or preparing content for publication.
             </div>
           </div>
         </div>
@@ -52,7 +49,7 @@ export default function About(props) {
               aria-controls="collapseTwo"
               style={myStyle}
             >
-              Accordion Item #2
+              <strong>Text Transformation Functions</strong>
             </button>
           </h2>
           <div
@@ -61,14 +58,12 @@ export default function About(props) {
             data-bs-parent="#accordionExample "
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              TextFlex offers a selection of functions designed to transform
+              text in various ways. Users can utilize functions such as text
+              reversal, text duplication, or text inversion to manipulate their
+              strings creatively. These functions provide users with the ability
+              to experiment with their text and generate unique variations
+              efficiently.
             </div>
           </div>
         </div>
@@ -83,7 +78,7 @@ export default function About(props) {
               aria-controls="collapseThree"
               style={myStyle}
             >
-              Accordion Item #3
+              <strong>Clipboard Integration</strong>
             </button>
           </h2>
           <div
@@ -92,14 +87,12 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Enhancing user convenience, TextFlex seamlessly integrates with
+              the clipboard functionality of the device. Users can easily copy
+              their manipulated text to the clipboard for swift pasting into
+              other applications or documents. This feature promotes a smooth
+              workflow, allowing users to transfer their edited text seamlessly
+              across different platforms and contexts.
             </div>
           </div>
         </div>

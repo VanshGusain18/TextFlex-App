@@ -4,6 +4,7 @@ import Textform from "./Components/Textform";
 import About from "./Components/About";
 import Alert from "./Components/Alert";
 import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -42,30 +43,37 @@ function App() {
 
   return (
     <>
-      <Navbar
-        title="TextUtils"
-        about="About"
-        mode={mode}
-        btnMode={btnMode}
-        handleMode={handleMode}
-      />
-
-      <Alert alert={alert} mode={mode} />
-
-      <div className={`container my-3 text-${btnMode}`}>
-        <Textform
-          headline="Enter the text to analyze"
+      <Router>
+        <Navbar
+          title="TextUtils"
+          about="About"
           mode={mode}
-          alert={alert}
-          showAlert={showAlert}
+          btnMode={btnMode}
+          handleMode={handleMode}
         />
-      </div>
 
-      <About
-        className="container my-3 text"
-        color={color}
-        backgroundColor={backgroundcolor}
-      />
+        <Alert alert={alert} mode={mode} />
+
+        <Switch>
+          <Route path="/about">
+            <About
+              className="container my-3 text"
+              color={color}
+              backgroundColor={backgroundcolor}
+            />
+          </Route>
+          <Route path="/">
+            <div className={`container my-3 text-${btnMode}`}>
+              <Textform
+                headline="Enter the text to analyze"
+                mode={mode}
+                alert={alert}
+                showAlert={showAlert}
+              />
+            </div>
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }
