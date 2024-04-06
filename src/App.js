@@ -65,7 +65,7 @@ function App() {
           <Route path="/">
             <div className={`container my-3 text-${btnMode}`}>
               <Textform
-                headline="Enter the text to analyze"
+                headline="TextFlex: Your Text, Your Way. Manipulate text effortlessly."
                 mode={mode}
                 alert={alert}
                 showAlert={showAlert}

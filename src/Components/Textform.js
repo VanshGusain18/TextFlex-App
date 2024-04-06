@@ -42,13 +42,25 @@ export default function Textform(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-1" onClick={handleUpClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-1"
+          onClick={handleUpClick}
+        >
           Upperclass
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleLoClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-1"
+          onClick={handleLoClick}
+        >
           Lowercase
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleClClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-1"
+          onClick={handleClClick}
+        >
           Clear
         </button>
       </div>
