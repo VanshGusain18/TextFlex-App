@@ -4,7 +4,7 @@ import Textform from "./Components/Textform";
 import About from "./Components/About";
 import Alert from "./Components/Alert";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -45,7 +45,7 @@ function App() {
     <>
       <Router>
         <Navbar
-          title="TextUtils"
+          title="TextFlex"
           about="About"
           mode={mode}
           btnMode={btnMode}
