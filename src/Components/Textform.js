@@ -75,8 +75,30 @@ export default function Textform(props) {
             value={text}
             onChange={handleChange}
             style={{
-              backgroundColor: props.mode === "dark" ? "black" : "white",
-              color: props.mode === "light" ? "black" : "white",
+              backgroundColor:
+                props.mode === "danger"
+                  ? "red"
+                  : props.mode === "success"
+                  ? "green"
+                  : props.mode === "warning"
+                  ? "yellow"
+                  : props.mode === "dark"
+                  ? "black"
+                  : props.mode === "light"
+                  ? "white"
+                  : "",
+              color:
+                props.mode === "danger"
+                  ? "white"
+                  : props.mode === "success"
+                  ? "white"
+                  : props.mode === "warning"
+                  ? "black"
+                  : props.mode === "dark"
+                  ? "white"
+                  : props.mode === "light"
+                  ? "black"
+                  : "",
             }}
           ></textarea>
         </div>

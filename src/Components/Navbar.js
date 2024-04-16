@@ -2,10 +2,25 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function Navbar(props) {
+  let navbarTextColor = "";
+
+  if (
+    props.mode === "dark" ||
+    props.mode === "danger" ||
+    props.mode === "success"
+  ) {
+    navbarTextColor = "dark";
+  }
+
+  if (props.mode === "light" || props.mode === "warning") {
+    navbarTextColor = "light";
+  }
+
   return (
     <div>
       <nav
-        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+        // className={navbar navbar-expand-lg navbar text-${props.mode} bg-${props.mode}}
+        className={`navbar navbar-expand-lg navbar-${navbarTextColor} bg-${props.mode}`}
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
@@ -35,20 +50,47 @@ export default function Navbar(props) {
                 </a>
               </li>
             </ul>
-            <div className="form-check form-switch">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-                onChange={props.handleMode}
-              />
-              <label
-                className={`form-check-label text-${props.btnMode}`}
-                htmlFor="flexSwitchCheckDefault"
+
+            <div
+              className="btn-group"
+              role="group"
+              aria-label="Basic mixed styles example"
+            >
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={props.handleRed}
               >
-                Dark Mode
-              </label>
+                Red
+              </button>
+              <button
+                type="button"
+                className="btn btn-warning"
+                onClick={props.handleYellow}
+              >
+                Yellow
+              </button>
+              <button
+                type="button"
+                className="btn btn-success"
+                onClick={props.handleGreen}
+              >
+                Green
+              </button>
+              <button
+                type="button"
+                className="btn btn-light"
+                onClick={props.handleLight}
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                className="btn btn-dark"
+                onClick={props.handleDark}
+              >
+                dark
+              </button>
             </div>
           </div>
         </div>

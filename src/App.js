@@ -23,6 +23,47 @@ function App() {
     }, 2000);
   };
 
+  const handleRed = () => {
+    setMode("danger");
+    setBtnMode("light");
+    document.body.style.backgroundColor = "red";
+    setColor("white");
+    setBackgroundcolor("red");
+    showAlert("red mode has been enabled", "success");
+  };
+  const handleYellow = () => {
+    setMode("warning");
+    setBtnMode("dark");
+    document.body.style.backgroundColor = "yellow";
+    setColor("black");
+    setBackgroundcolor("yellow");
+    showAlert("yellow mode has been enabled", "success");
+  };
+  const handleGreen = () => {
+    setMode("success");
+    setBtnMode("light");
+    document.body.style.backgroundColor = "green";
+    setColor("white");
+    setBackgroundcolor("green");
+    showAlert("yellow mode has been enabled", "success");
+  };
+  const handleLight = () => {
+    setMode("light");
+    setBtnMode("dark");
+    document.body.style.backgroundColor = "white";
+    setColor("black");
+    setBackgroundcolor("white");
+    showAlert("light mode has been enabled", "success");
+  };
+  const handleDark = () => {
+    setMode("dark");
+    setBtnMode("light");
+    document.body.style.backgroundColor = "black";
+    setColor("white");
+    setBackgroundcolor("black");
+    showAlert("dark mode has been enabled", "success");
+  };
+
   const handleMode = () => {
     if (mode === "light") {
       setMode("dark");
@@ -30,14 +71,14 @@ function App() {
       document.body.style.backgroundColor = "black";
       setColor("white");
       setBackgroundcolor("black");
-      showAlert("dark mode has been enablel", "success");
+      showAlert("dark mode has been enabled", "success");
     } else {
       setMode("light");
       setBtnMode("dark");
       document.body.style.backgroundColor = "white";
       setColor("black");
       setBackgroundcolor("white");
-      showAlert("light mode has been enablel", "success");
+      showAlert("light mode has been enabled", "success");
     }
   };
 
@@ -50,6 +91,11 @@ function App() {
           mode={mode}
           btnMode={btnMode}
           handleMode={handleMode}
+          handleRed={handleRed}
+          handleYellow={handleYellow}
+          handleGreen={handleGreen}
+          handleLight={handleLight}
+          handleDark={handleDark}
         />
 
         <Alert alert={alert} mode={mode} />
