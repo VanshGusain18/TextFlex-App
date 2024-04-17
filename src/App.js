@@ -9,8 +9,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   const [mode, setMode] = useState("light");
   const [btnMode, setBtnMode] = useState("dark");
-  const [color, setColor] = useState("black");
-  const [backgroundcolor, setBackgroundcolor] = useState("white");
   const [alert, setAlert] = useState(null);
 
   const showAlert = (messenge, type) => {
@@ -27,40 +25,31 @@ function App() {
     setMode("danger");
     setBtnMode("light");
     document.body.style.backgroundColor = "red";
-    setColor("white");
-    setBackgroundcolor("red");
     showAlert("red mode has been enabled", "success");
   };
   const handleYellow = () => {
     setMode("warning");
     setBtnMode("dark");
     document.body.style.backgroundColor = "yellow";
-    setColor("black");
-    setBackgroundcolor("yellow");
+
     showAlert("yellow mode has been enabled", "success");
   };
   const handleGreen = () => {
     setMode("success");
     setBtnMode("light");
     document.body.style.backgroundColor = "green";
-    setColor("white");
-    setBackgroundcolor("green");
     showAlert("yellow mode has been enabled", "success");
   };
   const handleLight = () => {
     setMode("light");
     setBtnMode("dark");
     document.body.style.backgroundColor = "white";
-    setColor("black");
-    setBackgroundcolor("white");
     showAlert("light mode has been enabled", "success");
   };
   const handleDark = () => {
     setMode("dark");
     setBtnMode("light");
     document.body.style.backgroundColor = "black";
-    setColor("white");
-    setBackgroundcolor("black");
     showAlert("dark mode has been enabled", "success");
   };
 
@@ -69,15 +58,11 @@ function App() {
       setMode("dark");
       setBtnMode("light");
       document.body.style.backgroundColor = "black";
-      setColor("white");
-      setBackgroundcolor("black");
       showAlert("dark mode has been enabled", "success");
     } else {
       setMode("light");
       setBtnMode("dark");
       document.body.style.backgroundColor = "white";
-      setColor("black");
-      setBackgroundcolor("white");
       showAlert("light mode has been enabled", "success");
     }
   };
@@ -102,11 +87,7 @@ function App() {
 
         <Switch>
           <Route path="/about">
-            <About
-              className="container my-3 text"
-              color={color}
-              backgroundColor={backgroundcolor}
-            />
+            <About className="container my-3 text" mode={mode} />
           </Route>
           <Route path="/">
             <div className={`container my-3 text-${btnMode}`}>

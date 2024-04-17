@@ -2,8 +2,30 @@ import React from "react";
 
 export default function About(props) {
   const myStyle = {
-    color: props.color,
-    backgroundColor: props.backgroundColor,
+    backgroundColor:
+      props.mode === "danger"
+        ? "red"
+        : props.mode === "success"
+        ? "green"
+        : props.mode === "warning"
+        ? "yellow"
+        : props.mode === "dark"
+        ? "black"
+        : props.mode === "light"
+        ? "white"
+        : "",
+    color:
+      props.mode === "danger"
+        ? "white"
+        : props.mode === "success"
+        ? "white"
+        : props.mode === "warning"
+        ? "black"
+        : props.mode === "dark"
+        ? "white"
+        : props.mode === "light"
+        ? "black"
+        : "",
   };
 
   return (
