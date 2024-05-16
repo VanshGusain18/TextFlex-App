@@ -63,13 +63,27 @@ export default function Textform(props) {
     props.showAlert("cleared", "success");
   };
 
+  let btnCol = "";
+
+  if (
+    props.mode === "dark" ||
+    props.mode === "danger" ||
+    props.mode === "success"
+  ) {
+    btnCol = "light";
+  }
+
+  if (props.mode === "light" || props.mode === "warning") {
+    btnCol = "dark";
+  }
+
   return (
     <>
       <div className="container">
         <div className="mb-3">
           <h1>{props.headline}</h1>
           <textarea
-            className="form-control"
+            className={`form-control border border-${btnCol}`}
             id="exampleFormControlTextarea1"
             rows="10"
             value={text}
@@ -105,7 +119,7 @@ export default function Textform(props) {
 
         <button
           disabled={text.length === 0}
-          className="btn btn-primary mx-1 my-1"
+          className={`btn btn-${btnCol} mx-1 my-1`}
           onClick={handleUpClick}
         >
           Upperclass
@@ -113,7 +127,7 @@ export default function Textform(props) {
 
         <button
           disabled={text.length === 0}
-          className="btn btn-primary mx-1 my-1"
+          className={`btn btn-${btnCol} mx-1 my-1`}
           onClick={handleLoClick}
         >
           Lowercase
@@ -121,7 +135,7 @@ export default function Textform(props) {
 
         <button
           disabled={text.length === 0}
-          className="btn btn-primary mx-1 my-1"
+          className={`btn btn-${btnCol} mx-1 my-1`}
           onClick={handleSeClick}
         >
           Sentence Case
@@ -129,7 +143,7 @@ export default function Textform(props) {
 
         <button
           disabled={text.length === 0}
-          className="btn btn-primary mx-1 my-1"
+          className={`btn btn-${btnCol} mx-1 my-1`}
           onClick={handlePaClick}
         >
           Pascal Case
@@ -137,7 +151,7 @@ export default function Textform(props) {
 
         <button
           disabled={text.length === 0}
-          className="btn btn-primary mx-1 my-1"
+          className={`btn btn-${btnCol} mx-1 my-1`}
           onClick={handleSnClick}
         >
           Snake Case
@@ -145,7 +159,7 @@ export default function Textform(props) {
 
         <button
           disabled={text.length === 0}
-          className="btn btn-primary mx-1 my-1"
+          className={`btn btn-${btnCol} mx-1 my-1`}
           onClick={handleClClick}
         >
           Clear
