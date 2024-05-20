@@ -185,7 +185,7 @@ export default function Textform(props) {
           mins
         </p>
         <h3>preview:</h3>
-        <p>{text.length > 0 ? text : "Nothing to priview..."}</p>
+        <p>{text.length > 0 ? text : "Nothing to preview..."}</p>
       </div>
     </>
   );
